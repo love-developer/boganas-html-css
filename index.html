@@ -171,12 +171,12 @@
       /* ── CATEGORIES ── */
       .categories {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
         gap: 0;
         border-radius: 14px;
         padding-bottom: 20px;
         margin: 14px 0;
-        flex-direction: row;
         direction: rtl;
       }
 
@@ -604,8 +604,18 @@
         justify-content: center;
       }
 
+      .mobile-green-bar {
+        display: none;
+      }
+
       /* Mobile nav hide on desktop */
       @media (max-width: 768px) {
+        .mobile-green-bar {
+          display: block;
+          width: 100%;
+          height: 10px;
+          background: var(--green);
+        }
         .top-bar {
           display: none;
         }
@@ -640,6 +650,9 @@
     </style>
   </head>
   <body>
+    <!-- MOBILE GREEN BAR -->
+    <div class="mobile-green-bar"></div>
+
     <!-- GREEN TOP BAR -->
     <div class="top-bar"></div>
 
